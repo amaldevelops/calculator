@@ -4,28 +4,29 @@ let number2=10;
 let operatorType;
 let result;
 
-function addNumbers(number1,number2)
+let addNumbers=(number1,number2)=>
 {
-result=number1+number2;
-console.log(result);
+    result=number1+number2;
+    console.log(result);
+
 }
 
 
 // Function to: subtract Numbers
 
-function subtract(number1,number2)
+
+let subtract=(number1,number2)=>
 {
-result=number1-number2;
-console.log(result);
+    result=number1-number2;
+    console.log(result);
 
 }
 
 
 // Function to: multiply Numbers
 
-function multiply(number1,number2)
+let multiply=(number1,number2)=>
 {
-
     result=number1*number2;
     console.log(result);
 }
@@ -33,11 +34,18 @@ function multiply(number1,number2)
 
 // Function to: divide Numbers
 
-function divide(number1,number2)
+// function divide(number1,number2)
+// {
+    
+// }
+
+let divide =(number1,number2) =>
 {
     result=number1/number2;
     console.log(result);
+
 }
+
 
 
 
@@ -72,4 +80,10 @@ divide(number1,number2);
 
 }
 
-operate(11,"/",10);
+operate(10,"*",10);
+
+
+const btn = document.querySelector("#no1");
+btn.addEventListener('click', () => {
+  alert("Hello World");
+});
