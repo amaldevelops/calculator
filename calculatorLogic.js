@@ -82,8 +82,11 @@ divide(number1,number2);
 
 operate(10,"*",10);
 
+//Add Click Event listeners to all the buttons
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
 
-const btn = document.querySelector("#no1");
-btn.addEventListener('click', () => {
-  alert("Hello World");
+  button.addEventListener('click', () => {
+    console.log(button.id);
+  });
 });
