@@ -87,6 +87,7 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
 
   button.addEventListener('click', () => {
+    operate(button.id,"button.id",button.id);
     console.log(button.id);
   });
 });
