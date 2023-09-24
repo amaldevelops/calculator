@@ -1,9 +1,10 @@
-// Function to: Add Numbers
-let number1=35;
-let number2=10;
+// Section to add the required variable for the calculator
+let number1;
+let number2;
 let operatorType;
 let result;
 
+// Function to: Add Numbers
 let addNumbers=(number1,number2)=>
 {
     result=number1+number2;
@@ -82,12 +83,16 @@ divide(number1,number2);
 
 operate(10,"*",10);
 
+
 //Add Click Event listeners to all the buttons
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
 
   button.addEventListener('click', () => {
-    operate(button.id,"button.id",button.id);
-    console.log(button.id);
+
+    // console.log(button.id);
+    number1=button.id;
+    console.log("Number 1 Entered is:"+number1);
+    
   });
 });
