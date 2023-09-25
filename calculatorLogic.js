@@ -79,7 +79,6 @@ divide(number1,number2);
 
 }
 
-operate(10,"*",10);
 
 
 //Add Click Event listeners to all the buttons
@@ -90,8 +89,12 @@ buttons.forEach((button) => {
 
     // console.log(button.id);
     number1=Number(button.id);
+    operatorType=Number(button.id);
+    number2=Number(button.id);
 
     console.log("Number 1 Entered is:"+number1+"Type is "+ typeof(number1));
+    operate(number1,operatorType,number2);
+
     
   });
 });
