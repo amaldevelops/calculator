@@ -5,13 +5,42 @@ body{
 
 #displayOutput{
     color:rgb(87, 194, 123);
-    font-size: 2em;
+    font-size: 3em;
 }
 
 #calculator-body
 {
-    background-color: red;
+    background-color: rgb(25, 24, 24);
 }
 
+button
+{
+    font-size: 3em;
 
+}
+
+#zero
+{
+
+}
+
+#oneTwoThree
+{
+    
+}
+
+#fourFiveSix
+{
+/* justify-content: space-between; */
+}
+
+#sevenEightNine
+{
+}
+
+#arithmeticOperators
+{
+    /* flex:1; */
+
+}
 

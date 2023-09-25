@@ -48,8 +48,6 @@ let divide =(number1,number2) =>
 }
 
 
-
-
 // Operator Function to call up each operator
 function operate(number1,operatorType,number2,)
 {
@@ -91,8 +89,9 @@ buttons.forEach((button) => {
   button.addEventListener('click', () => {
 
     // console.log(button.id);
-    number1=button.id;
-    console.log("Number 1 Entered is:"+number1);
+    number1=Number(button.id);
+
+    console.log("Number 1 Entered is:"+number1+"Type is "+ typeof(number1));
     
   });
 });
