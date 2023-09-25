@@ -3,6 +3,7 @@ let number1;
 let number2;
 let operatorType;
 let result;
+const calculationArray=[];
 
 // Function to: Add Numbers
 let addNumbers=(number1,number2)=>
@@ -88,12 +89,19 @@ buttons.forEach((button) => {
   button.addEventListener('click', () => {
 
     // console.log(button.id);
-    number1=Number(button.id);
-    operatorType=Number(button.id);
-    number2=Number(button.id);
 
-    console.log("Number 1 Entered is:"+number1+"Type is "+ typeof(number1));
+    calculationArray[0]=button.id;
+    calculationArray[1]=button.id;
+    calculationArray[2]=button.id;
+
+    number1=Number(calculationArray[0]);
+    operatorType=Number(calculationArray[1]);
+    number2=Number(calculationArray[2]);
+    
+
+    console.log("Number Entered is: "+operatorType+"Type is "+ typeof(operatorType));
     operate(number1,operatorType,number2);
+    // console.log(calculationArray);
 
     
   });
