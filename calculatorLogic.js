@@ -92,11 +92,11 @@ console.log(calculatorDisplay);
     calculationArray[2]=Number(button.id);
     console.log(calculationArray);
 
-    for (const calculationArrays of calculationArray)
-    {
-        console.log(calculationArrays);
-        console.log (typeof(calculationArrays));
-    }
+    // for (const calculationArrays of calculationArray)
+    // {
+    //     console.log(calculationArrays);
+    //     console.log (typeof(calculationArrays));
+    // }
 
     number1=Number(calculationArray[0]);
     operatorType=Number(calculationArray[1]);
