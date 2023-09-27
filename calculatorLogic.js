@@ -75,12 +75,8 @@ else if (operatorType==="/")
 {
 console.log("Division")
 divide(number1,number2);
-
 }
-
 }
-
-
 
 //Add Click Event listeners to all the buttons
 const buttons = document.querySelectorAll('button');
@@ -88,11 +84,19 @@ buttons.forEach((button) => {
 
   button.addEventListener('click', () => {
 
-    // console.log(button.id);
+// Testing area start
+const calculatorDisplay=document.querySelector('#displayOutput');
+console.log(calculatorDisplay);
+    calculationArray[0]=Number(button.id);
+    calculationArray[1]=Number(button.id);
+    calculationArray[2]=Number(button.id);
+    console.log(calculationArray);
 
-    calculationArray[0]=button.id;
-    calculationArray[1]=button.id;
-    calculationArray[2]=button.id;
+    for (const calculationArrays of calculationArray)
+    {
+        console.log(calculationArrays);
+        console.log (typeof(calculationArrays));
+    }
 
     number1=Number(calculationArray[0]);
     operatorType=Number(calculationArray[1]);
@@ -103,6 +107,7 @@ buttons.forEach((button) => {
     operate(number1,operatorType,number2);
     // console.log(calculationArray);
 
+//Testing area End
     
   });
 });
