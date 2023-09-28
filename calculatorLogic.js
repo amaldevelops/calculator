@@ -84,14 +84,19 @@ buttons.forEach((button) => {
 
   button.addEventListener('click', () => {
 
-// Testing area start
-const calculatorDisplay=document.querySelector('#displayOutput');
-console.log(calculatorDisplay);
+    testing(); 
+    
+  });
+
+  function testing ()
+  {
+    const calculatorDisplay=document.querySelector('#displayOutput');
+    // console.log(calculatorDisplay);
     calculationArray[0]=Number(button.id);
     calculationArray[1]=Number(button.id);
     calculationArray[2]=Number(button.id);
-    console.log(calculationArray);
-    calculatorDisplay.textContent="Hello world";
+    // console.log(calculationArray);
+    calculatorDisplay.textContent=calculationArray; // This code will show array in displayout
 
     // for (const calculationArrays of calculationArray)
     // {
@@ -108,7 +113,6 @@ console.log(calculatorDisplay);
     operate(number1,operatorType,number2);
     // console.log(calculationArray);
 
-//Testing area End
-    
-  });
+  }
+
 });
