@@ -91,6 +91,7 @@ console.log(calculatorDisplay);
     calculationArray[1]=Number(button.id);
     calculationArray[2]=Number(button.id);
     console.log(calculationArray);
+    calculatorDisplay.textContent="Hello world";
 
     // for (const calculationArrays of calculationArray)
     // {
