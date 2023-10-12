@@ -91,18 +91,11 @@ buttons.forEach((button) => {
   function testing ()
   {
     const calculatorDisplay=document.querySelector('#displayOutput');
-    // console.log(calculatorDisplay);
     calculationArray[0]=Number(button.id);
     calculationArray[1]=Number(button.id);
     calculationArray[2]=Number(button.id);
-    // console.log(calculationArray);
     calculatorDisplay.textContent=calculationArray; // This code will show array in displayout
 
-    // for (const calculationArrays of calculationArray)
-    // {
-    //     console.log(calculationArrays);
-    //     console.log (typeof(calculationArrays));
-    // }
 
     number1=Number(calculationArray[0]);
     operatorType=Number(calculationArray[1]);
@@ -111,7 +104,6 @@ buttons.forEach((button) => {
 
     console.log("Number Entered is: "+operatorType+"Type is "+ typeof(operatorType));
     operate(number1,operatorType,number2);
-    // console.log(calculationArray);
 
   }
 
