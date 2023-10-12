@@ -1,3 +1,19 @@
+/*
+Task List for the project
+[] Create a loop to add number to the const calculationArray[] so inputted
+number can be assigned to calculationArray[0] which is the first number
+calculationArray[1] which is the operator
+calculationArray[2] which is the second number to be calculated
+
+[] Pass the array number to variables number1, operatorType and number2
+
+[] Run each of the functions related to the calculations i.e addition, subtraction, etc
+
+[] Store the result in the result variable and call up the display function to show
+the output in the calculator
+
+
+*/
 // Section to add the required variable for the calculator
 let number1;
 let number2;
