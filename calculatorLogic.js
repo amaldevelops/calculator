@@ -1,16 +1,14 @@
 /*
 Task List for the project
-[] Create a loop to add number to the const calculationArray[] so inputted
-number can be assigned to calculationArray[0] which is the first number
-calculationArray[1] which is the operator
+[] Add number to the const calculationArray[] so inputted
+first number can be assigned to calculationArray[1]
+selected operator should be saved up in calculationArray[3]
 calculationArray[2] which is the second number to be calculated
+calculated result should be stored oncalculationArray[4]
 
-[] Pass the array number to variables number1, operatorType and number2
+[] A function should check that All three values of the calculationArray[1][2][3] is not null, if even one is null should wait for user input and based on the calculationArray[3] Operator saved call up the required calculation function
 
-[] Run each of the functions related to the calculations i.e addition, subtraction, etc
-
-[] Store the result in the result variable and call up the display function to show
-the output in the calculator
+[] After running the required calculation function related to the calculations i.e addition, subtraction, etc Store the result in the oncalculationArray[4] and call up the display function to show the output in the calculator, set oncalculationArray[1][2][2] to Null
 
 
 */
