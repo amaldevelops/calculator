@@ -99,12 +99,12 @@ buttons.forEach((button) => {
 
   button.addEventListener('click', () => {
 
-    testing(); 
+    displayUpdate(); 
     
   });
 
 
-  function testing ()
+  function displayUpdate ()
   {
     const calculatorDisplay=document.querySelector('#displayOutput');
     calculationArray[0]=Number(button.id);
@@ -120,6 +120,12 @@ buttons.forEach((button) => {
 
     console.log("Number Entered is: "+operatorType+"Type is "+ typeof(operatorType));
     operate(number1,operatorType,number2);
+
+    // Testing area
+    operate(100,"+",5);
+    calculatorDisplay.textContent="Hello"; // This code will show array in displayout
+
+
 
   }
 
