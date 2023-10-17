@@ -1,5 +1,5 @@
 /*
-Task List for the project
+Task List / Logic for the project
 [] Add number to the const calculationArray[] so inputted
 first number can be assigned to calculationArray[1]
 selected operator should be saved up in calculationArray[3]
@@ -92,6 +92,7 @@ divide(number1,number2);
 }
 }
 
+function buttonCapture(){
 //Add Click Event listeners to all the buttons
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
@@ -101,6 +102,7 @@ buttons.forEach((button) => {
     testing(); 
     
   });
+
 
   function testing ()
   {
@@ -122,3 +124,6 @@ buttons.forEach((button) => {
   }
 
 });
+}
+
+buttonCapture();
