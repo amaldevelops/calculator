@@ -19,11 +19,16 @@ let operatorType;
 let result;
 const calculationArray=[];
 
+
 // Function to: Add Numbers
 let addNumbers=(number1,number2)=>
 {
     result=number1+number2;
     console.log(result);
+    // return displayUpdate(result);  
+    // calculatorDisplay.textContent=operate; // This code will show array in displayout
+//   displayUpdate(result);
+
 
 }
 
@@ -99,8 +104,8 @@ buttons.forEach((button) => {
 
   button.addEventListener('click', () => {
 
-    displayUpdate(); 
-    
+    displayUpdate();
+
   });
 
 
@@ -119,13 +124,11 @@ buttons.forEach((button) => {
     
 
     console.log("Number Entered is: "+operatorType+"Type is "+ typeof(operatorType));
-    operate(number1,operatorType,number2);
+    // operate(number1,operatorType,number2);
 
     // Testing area
-    operate(100,"+",5);
-    calculatorDisplay.textContent="Hello"; // This code will show array in displayout
-
-
+    // console.log(operate);
+    operate(calculationArray[0],"+",calculationArray[2]);
 
   }
 
