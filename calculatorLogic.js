@@ -105,6 +105,9 @@ buttons.forEach((button) => {
   button.addEventListener('click', () => {
 
     displayUpdate();
+    console.log(Number(button.id));
+    operate(calculationArray[0],"/",calculationArray[2]);
+
 
   });
 
@@ -115,12 +118,12 @@ buttons.forEach((button) => {
     calculationArray[0]=Number(button.id);
     calculationArray[1]=Number(button.id);
     calculationArray[2]=Number(button.id);
-    calculatorDisplay.textContent=calculationArray; // This code will show array in displayout
+    calculatorDisplay.textContent=calculationArray[2]; // This code will show array in displayout
 
 
-    number1=Number(calculationArray[0]);
-    operatorType=Number(calculationArray[1]);
-    number2=Number(calculationArray[2]);
+    // number1=Number(calculationArray[0]);
+    // operatorType=Number(calculationArray[1]);
+    // number2=Number(calculationArray[2]);
     
 
     console.log("Number Entered is: "+operatorType+"Type is "+ typeof(operatorType));
@@ -128,7 +131,6 @@ buttons.forEach((button) => {
 
     // Testing area
     // console.log(operate);
-    operate(calculationArray[0],"+",calculationArray[2]);
 
   }
 
