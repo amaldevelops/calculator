@@ -1,14 +1,15 @@
 /*
 Task List / Logic for the project
-[] Add number to the const calculationArray[] so inputted
-first number can be assigned to calculationArray[1]
-selected operator should be saved up in calculationArray[3]
-calculationArray[2] which is the second number to be calculated
-calculated result should be stored oncalculationArray[4]
 
-[] A function should check that All three values of the calculationArray[1][2][3] is not null, if even one is null should wait for user input and based on the calculationArray[3] Operator saved call up the required calculation function
+Pseudo code
+*User enters the first number: User can pause and keep continuing to enter the number, this process only stops
+when the user enters operators (+  -  *  /  =  CLEAR). If = is entered currently entered number is shown, if user enters CLEAR then the Array and display is cleared. Currently entered number is shown on display in real time and saved to calculationArray[1]
 
-[] After running the required calculation function related to the calculations i.e addition, subtraction, etc Store the result in the oncalculationArray[4] and call up the display function to show the output in the calculator, set oncalculationArray[1][2][2] to Null
+* User enters a operator (+  -  *  /) then first entered number is saved to an calculationArray[1] and program keeps listening to the entered operator, If the user enters few operators only the last entered operator is saved in calculationArray[3], then programs moves to listen to the second number. First Number and operator is shown on display in real time
+
+*User enters the Second number: User can pause and keep continuing to enter the number, this process only stops
+when the user enters operators (+  -  *  /  =  CLEAR). If = is entered Second number is saved to calculationArray[2] 
+based on saved operator on array[3] required arithmetic function is called and array[1] and array[2]is passed to relevant arithmetic function, if user enters CLEAR then the Array and display is cleared. Currently entered calculation is shown on display in real time and saved to oncalculationArray[4]. Whole oncalculationArray is shown on the display
 
 
 */
@@ -118,7 +119,7 @@ buttons.forEach((button) => {
     calculationArray[0]=Number(button.id);
     calculationArray[1]=Number(button.id);
     calculationArray[2]=Number(button.id);
-    calculatorDisplay.textContent=calculationArray[2]; // This code will show array in displayout
+    calculatorDisplay.textContent=calculationArray; // This code will show array in displayout
 
 
     // number1=Number(calculationArray[0]);
