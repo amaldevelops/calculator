@@ -98,6 +98,8 @@ divide(number1,number2);
 }
 }
 
+// *User enters the first number: User can pause and keep continuing to enter the number, this process only stops
+// when the user enters operators (+  -  *  /  =  CLEAR). If = is entered currently entered number is shown, if user enters CLEAR then the Array and display is cleared. Currently entered number is shown on display in real time and saved to calculationArray[1]
 function buttonCapture(){
 //Add Click Event listeners to all the buttons
 const buttons = document.querySelectorAll('button');
