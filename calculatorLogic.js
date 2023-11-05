@@ -21,6 +21,49 @@ let result;
 const calculationArray=[];
 
 
+// *User enters the first number: User can pause and keep continuing to enter the number, this process only stops
+// when the user enters operators (+  -  *  /  =  CLEAR). If = is entered currently entered number is shown, if user enters CLEAR then the Array and display is cleared. Currently entered number is shown on display in real time and saved to calculationArray[1]
+function buttonCapture(){
+    //Add Click Event listeners to all the buttons
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
+    
+      button.addEventListener('click', () => {
+    
+        displayUpdate();
+        console.log(Number(button.id));
+        operate(calculationArray[0],"/",calculationArray[2]);
+    
+    
+      });
+    
+    
+      function displayUpdate ()
+      {
+        const calculatorDisplay=document.querySelector('#displayOutput');
+        calculationArray[0]=Number(button.id);
+        calculationArray[1]=Number(button.id);
+        calculationArray[2]=Number(button.id);
+        calculatorDisplay.textContent=calculationArray; // This code will show array in displayout
+    
+    
+        // number1=Number(calculationArray[0]);
+        // operatorType=Number(calculationArray[1]);
+        // number2=Number(calculationArray[2]);
+        
+    
+        console.log("Number Entered is: "+operatorType+"Type is "+ typeof(operatorType));
+        // operate(number1,operatorType,number2);
+    
+        // Testing area
+        // console.log(operate);
+    
+      }
+    
+    });
+    }
+    
+
 // Function to: Add Numbers
 let addNumbers=(number1,number2)=>
 {
@@ -29,7 +72,6 @@ let addNumbers=(number1,number2)=>
     // return displayUpdate(result);  
     // calculatorDisplay.textContent=operate; // This code will show array in displayout
 //   displayUpdate(result);
-
 
 }
 
@@ -98,46 +140,5 @@ divide(number1,number2);
 }
 }
 
-// *User enters the first number: User can pause and keep continuing to enter the number, this process only stops
-// when the user enters operators (+  -  *  /  =  CLEAR). If = is entered currently entered number is shown, if user enters CLEAR then the Array and display is cleared. Currently entered number is shown on display in real time and saved to calculationArray[1]
-function buttonCapture(){
-//Add Click Event listeners to all the buttons
-const buttons = document.querySelectorAll('button');
-buttons.forEach((button) => {
-
-  button.addEventListener('click', () => {
-
-    displayUpdate();
-    console.log(Number(button.id));
-    operate(calculationArray[0],"/",calculationArray[2]);
-
-
-  });
-
-
-  function displayUpdate ()
-  {
-    const calculatorDisplay=document.querySelector('#displayOutput');
-    calculationArray[0]=Number(button.id);
-    calculationArray[1]=Number(button.id);
-    calculationArray[2]=Number(button.id);
-    calculatorDisplay.textContent=calculationArray; // This code will show array in displayout
-
-
-    // number1=Number(calculationArray[0]);
-    // operatorType=Number(calculationArray[1]);
-    // number2=Number(calculationArray[2]);
-    
-
-    console.log("Number Entered is: "+operatorType+"Type is "+ typeof(operatorType));
-    // operate(number1,operatorType,number2);
-
-    // Testing area
-    // console.log(operate);
-
-  }
-
-});
-}
 
 buttonCapture();
