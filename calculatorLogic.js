@@ -32,7 +32,7 @@ function buttonCapture(){
     
         displayUpdate();
         console.log(Number(button.id));
-        operate(calculationArray[0],"/",calculationArray[2]);
+        operate(calculationArray[0],"+",calculationArray[2]);
     
     
       });
@@ -62,6 +62,35 @@ function buttonCapture(){
     
     });
     }
+
+    // Operator Function to call up each operator
+function operate(number1,operatorType,number2,)
+{
+if (operatorType==="+")
+{
+    console.log("Plus operator")
+    addNumbers(number1,number2);
+}
+
+else if(operatorType==="-")
+{
+    console.log("Minus Operator");
+    subtract(number1,number2);
+}
+
+else if (operatorType==="*")
+{
+    console.log("Multiplication");
+    multiply(number1,number2);
+
+}
+
+else if (operatorType==="/")
+{
+console.log("Division")
+divide(number1,number2);
+}
+}
     
 
 // Function to: Add Numbers
@@ -111,34 +140,7 @@ let divide =(number1,number2) =>
 }
 
 
-// Operator Function to call up each operator
-function operate(number1,operatorType,number2,)
-{
-if (operatorType==="+")
-{
-    console.log("Plus operator")
-    addNumbers(number1,number2);
-}
 
-else if(operatorType==="-")
-{
-    console.log("Minus Operator");
-    subtract(number1,number2);
-}
-
-else if (operatorType==="*")
-{
-    console.log("Multiplication");
-    multiply(number1,number2);
-
-}
-
-else if (operatorType==="/")
-{
-console.log("Division")
-divide(number1,number2);
-}
-}
 
 
 buttonCapture();
