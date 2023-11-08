@@ -2,6 +2,10 @@
 Task List / Logic for the project
 
 Pseudo code
+* calculationArray[1] = First Number
+* calculationArray[2] = Second number 
+* calculationArray[3] = Operator
+
 *User enters the first number: User can pause and keep continuing to enter the number, this process only stops
 when the user enters operators (+  -  *  /  =  CLEAR). If = is entered currently entered number is shown, if user enters CLEAR then the Array and display is cleared. Currently entered number is shown on display in real time and saved to calculationArray[1]
 
@@ -18,7 +22,8 @@ let number1;
 let number2;
 let operatorType;
 let result;
-const calculationArray=[];
+
+const calculationArray=[]; // This array is used to capture the numbers and operator from the user input buttons.
 
 
 // *User enters the first number: User can pause and keep continuing to enter the number, this process only stops
@@ -30,33 +35,51 @@ function buttonCapture(){
     
       button.addEventListener('click', () => {
     
+        calculationArray[1]=34;
+        calculationArray[2]=67;
+        calculationArray[3]="+";
+
         displayUpdate();
-        console.log(Number(button.id));
-        operate(calculationArray[0],"+",calculationArray[2]);
-    
-    
+        operate(calculationArray[1],calculationArray[3],calculationArray[2]);// This will call up the operate function with the inputted numbers and operators
+
+        // for (let i=0; i<3; i++){
+        //     // console.log(i);
+        //     calculationArray[i]=Number(button.id);
+        //     console.log(calculationArray[i]);
+        // }
+
+
+
+        // let a=0;
+        // if (a<4){
+        //     calculationArray[a]=Number(button.id)
+        //     a++;
+        // }
+
+        // else if (a==4)
+        // {
+        //     a=0;
+        // }
+
+        console.log("Array 1= "+calculationArray[1] +"  Array 2= " +calculationArray[2] + "  Array 3= "+ calculationArray[3])
+
+        
       });
     
     
       function displayUpdate ()
       {
         const calculatorDisplay=document.querySelector('#displayOutput');
-        calculationArray[0]=Number(button.id);
-        calculationArray[1]=Number(button.id);
-        calculationArray[2]=Number(button.id);
-        calculatorDisplay.textContent=calculationArray; // This code will show array in displayout
-    
-    
-        // number1=Number(calculationArray[0]);
-        // operatorType=Number(calculationArray[1]);
-        // number2=Number(calculationArray[2]);
         
+
+        // calculationArray[0]=Number(button.id);
+        // calculationArray[1]=Number(button.id);
+        // calculationArray[2]=Number(button.id);
+        calculatorDisplay.textContent=calculationArray; // This code will show array in displayout
+           
     
-        console.log("Number Entered is: "+operatorType+"Type is "+ typeof(operatorType));
-        // operate(number1,operatorType,number2);
-    
-        // Testing area
-        // console.log(operate);
+        // console.log("Number Entered is: "+operatorType+"Type is "+ typeof(operatorType));
+
     
       }
     
@@ -66,6 +89,8 @@ function buttonCapture(){
     // Operator Function to call up each operator
 function operate(number1,operatorType,number2,)
 {
+
+
 if (operatorType==="+")
 {
     console.log("Plus operator")
