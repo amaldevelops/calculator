@@ -22,8 +22,8 @@ let number1;
 let number2;
 let operatorType;
 let result;
-
 const calculationArray=[]; // This array is used to capture the numbers and operator from the user input buttons.
+let a=1;
 
 
 // *User enters the first number: User can pause and keep continuing to enter the number, this process only stops
@@ -34,10 +34,40 @@ function buttonCapture(){
     buttons.forEach((button) => {
     
       button.addEventListener('click', () => {
+
+        calculationArray.push(button.id);
+        console.log(calculationArray);
+        number1=Number(calculationArray[0]+calculationArray[1]+calculationArray[2]);
+        // number2=Number(number1);
+
+        console.log(number1);
+        console.log(typeof(number1));
+
+
+        // Number(button.id);
+        // if (button.id==="+")
+        // {
+        //     console.log("It is a +");
+
+        // }
+
+        // else if (button.id==="+"){
+        //     console.log("Not a Number");
+        // }
     
-        calculationArray[1]=34;
-        calculationArray[2]=67;
-        calculationArray[3]="+";
+        // if (a<=3){
+        //     calculationArray[a]=Number(button.id)
+        //     a++;
+        // }
+
+        // else if (a==4)
+        // {
+        //     a=0;
+        // }
+// calculationArray Testing code
+        // calculationArray[1]=34;
+        // calculationArray[2]=67;
+        // calculationArray[3]="+";
 
         displayUpdate();
         operate(calculationArray[1],calculationArray[3],calculationArray[2]);// This will call up the operate function with the inputted numbers and operators
@@ -46,19 +76,6 @@ function buttonCapture(){
         //     // console.log(i);
         //     calculationArray[i]=Number(button.id);
         //     console.log(calculationArray[i]);
-        // }
-
-
-
-        // let a=0;
-        // if (a<4){
-        //     calculationArray[a]=Number(button.id)
-        //     a++;
-        // }
-
-        // else if (a==4)
-        // {
-        //     a=0;
         // }
 
         console.log("Array 1= "+calculationArray[1] +"  Array 2= " +calculationArray[2] + "  Array 3= "+ calculationArray[3])
