@@ -38,6 +38,41 @@ function buttonCapture(){
         calculationArray.push(button.id);
         console.log(calculationArray);
         console.log("Length of the CalculationArray is: "+ calculationArray.length);
+
+        if (button.id==="0"
+            ||button.id==="1"
+            ||button.id==="2"
+            ||button.id==="3"
+            ||button.id==="4"
+            ||button.id==="5"
+            ||button.id==="6"
+            ||button.id==="7"
+            ||button.id==="8"
+            ||button.id==="9"
+            )
+                {
+                    console.log("Number Entered")
+                }
+
+        else if (button.id==="/"
+                ||button.id==="*"
+                ||button.id==="-"
+                ||button.id==="+"
+
+            ) 
+                {
+                    console.log("Operator Entered");
+                }
+        
+        else if(button.id==="=")
+                {
+                    console.log("Equal Operator Entered")
+                }
+        
+        else if (button.id==="clear")
+                {
+                    console.log("Clear Button pressed")
+                }
         // for (i=0;i<calculationArray.length;i++)
         //     {
         //         number1=+calculationArray[i];
