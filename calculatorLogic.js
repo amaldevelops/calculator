@@ -37,11 +37,17 @@ function buttonCapture(){
 
         calculationArray.push(button.id);
         console.log(calculationArray);
-        number1=Number(calculationArray[0]+calculationArray[1]+calculationArray[2]);
+        console.log("Length of the CalculationArray is: "+ calculationArray.length);
+        // for (i=0;i<calculationArray.length;i++)
+        //     {
+        //         number1=+calculationArray[i];
+        //         console.log(number1);
+
+        //     }
         // number2=Number(number1);
 
-        console.log(number1);
-        console.log(typeof(number1));
+        // console.log(number1);
+        // console.log(typeof(number1));
 
 
         // Number(button.id);
@@ -70,7 +76,7 @@ function buttonCapture(){
         // calculationArray[3]="+";
 
         displayUpdate();
-        operate(calculationArray[1],calculationArray[3],calculationArray[2]);// This will call up the operate function with the inputted numbers and operators
+        // operate(calculationArray[1],calculationArray[3],calculationArray[2]);// This will call up the operate function with the inputted numbers and operators
 
         // for (let i=0; i<3; i++){
         //     // console.log(i);
@@ -78,7 +84,7 @@ function buttonCapture(){
         //     console.log(calculationArray[i]);
         // }
 
-        console.log("Array 1= "+calculationArray[1] +"  Array 2= " +calculationArray[2] + "  Array 3= "+ calculationArray[3])
+        // console.log("Array 1= "+calculationArray[1] +"  Array 2= " +calculationArray[2] + "  Array 3= "+ calculationArray[3])
 
         
       });
