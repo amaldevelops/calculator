@@ -77,16 +77,15 @@ function buttonCapture(){
                     calculationArray.length=0;
                     console.log(calculationArray);
                 }
-        // for (i=0;i<calculationArray.length;i++)
+        
+        
+        //  for (i=0;i<calculationArray.length;i++)
         //     {
         //         number1=+calculationArray[i];
-        //         console.log(number1);
 
         //     }
-        // number2=Number(number1);
+        //     console.log("Number1 is: " + number1);
 
-        // console.log(number1);
-        // console.log(typeof(number1));
 
 
         // Number(button.id);
@@ -134,14 +133,8 @@ function buttonCapture(){
         const calculatorDisplay=document.querySelector('#displayOutput');
         
 
-        // calculationArray[0]=Number(button.id);
-        // calculationArray[1]=Number(button.id);
-        // calculationArray[2]=Number(button.id);
         calculatorDisplay.textContent=calculationArray; // This code will show array in displayout
            
-    
-        // console.log("Number Entered is: "+operatorType+"Type is "+ typeof(operatorType));
-
     
       }
     
