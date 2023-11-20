@@ -67,11 +67,15 @@ function buttonCapture(){
         else if(button.id==="=")
                 {
                     console.log("Equal Operator Entered")
+
+
                 }
         
         else if (button.id==="clear")
                 {
                     console.log("Clear Button pressed")
+                    calculationArray.length=0;
+                    console.log(calculationArray);
                 }
         // for (i=0;i<calculationArray.length;i++)
         //     {
