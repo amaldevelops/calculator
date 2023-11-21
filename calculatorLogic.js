@@ -35,9 +35,7 @@ function buttonCapture(){
     
       button.addEventListener('click', () => {
 
-        calculationArray.push(button.id);
-        console.log(calculationArray);
-        console.log("Length of the CalculationArray is: "+ calculationArray.length);
+        
 
         if (button.id==="0"
             ||button.id==="1"
@@ -52,6 +50,9 @@ function buttonCapture(){
             )
                 {
                     console.log("Number Entered")
+                    calculationArray.push(button.id);
+        console.log(calculationArray);
+        console.log("Length of the CalculationArray is: "+ calculationArray.length);
                 }
 
         else if (button.id==="/"
@@ -62,6 +63,20 @@ function buttonCapture(){
             ) 
                 {
                     console.log("Operator Entered");
+                    // console.log(calculationArray);
+
+                    // for (i=0;i<calculationArray.length;i++)
+                    // {
+                    //     number1=+calculationArray[i];
+                    //     console.log("Number1 is: " + number1);
+                    //     console.log(typeof(number1));
+
+                    // }
+
+                    number1=calculationArray.join("") // This will join the array together to a single string
+                    number1=parseInt(number1,10);
+                    console.log(number1+ "Type is" + typeof(number1));
+
                 }
         
         else if(button.id==="=")
@@ -79,12 +94,7 @@ function buttonCapture(){
                 }
         
         
-        //  for (i=0;i<calculationArray.length;i++)
-        //     {
-        //         number1=+calculationArray[i];
 
-        //     }
-        //     console.log("Number1 is: " + number1);
 
 
 
@@ -218,8 +228,6 @@ let divide =(number1,number2) =>
     console.log(result);
 
 }
-
-
 
 
 
