@@ -18,8 +18,8 @@ based on saved operator on array[3] required arithmetic function is called and a
 
 */
 // Section to add the required variable for the calculator
-let number1;
-let number2;
+let number1=null;
+let number2=null;
 let operatorType;
 let result;
 const calculationArray=[]; // This array is used to capture the numbers and operator from the user input buttons.
@@ -35,7 +35,8 @@ function buttonCapture(){
     
       button.addEventListener('click', () => {
 
-        
+        console.log("number1 value" +number1);
+        console.log("number2 value" +number2);
 
         if (button.id==="0"
             ||button.id==="1"
@@ -63,19 +64,13 @@ function buttonCapture(){
             ) 
                 {
                     console.log("Operator Entered");
-                    // console.log(calculationArray);
-
-                    // for (i=0;i<calculationArray.length;i++)
-                    // {
-                    //     number1=+calculationArray[i];
-                    //     console.log("Number1 is: " + number1);
-                    //     console.log(typeof(number1));
-
-                    // }
+  
 
                     number1=calculationArray.join("") // This will join the array together to a single string
                     number1=parseInt(number1,10);
                     console.log(number1+ "Type is" + typeof(number1));
+                    calculationArray.length=0;
+
 
                 }
         
@@ -232,3 +227,14 @@ let divide =(number1,number2) =>
 
 
 buttonCapture();
+
+// Code to be checked and removed
+                  // console.log(calculationArray);
+
+                    // for (i=0;i<calculationArray.length;i++)
+                    // {
+                    //     number1=+calculationArray[i];
+                    //     console.log("Number1 is: " + number1);
+                    //     console.log(typeof(number1));
+
+                    // }
