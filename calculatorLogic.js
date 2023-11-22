@@ -64,12 +64,25 @@ function buttonCapture(){
             ) 
                 {
                     console.log("Operator Entered");
+
+                    if (number1===null)
+                    {
+                        number1=calculationArray.join("") // This will join the array together to a single string
+                        number1=parseInt(number1,10); // This will convert string to a number
+                        console.log("Number 1 Details: "+ number1+ "Type is" + typeof(number1));
+                        calculationArray.length=0;
+                    }
+
+                    else if (number2===null)
+                    {
+                        number2=calculationArray.join("") // This will join the array together to a single string
+                        number2=parseInt(number2,10); // This will convert string to a number
+                        console.log("Number 2 Details: "+ number2+ "Type is" + typeof(number2));
+                        calculationArray.length=0;
+                    }
   
 
-                    number1=calculationArray.join("") // This will join the array together to a single string
-                    number1=parseInt(number1,10);
-                    console.log(number1+ "Type is" + typeof(number1));
-                    calculationArray.length=0;
+
 
 
                 }
@@ -89,10 +102,6 @@ function buttonCapture(){
                 }
         
         
-
-
-
-
         // Number(button.id);
         // if (button.id==="+")
         // {
