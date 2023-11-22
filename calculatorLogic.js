@@ -54,6 +54,7 @@ function buttonCapture(){
                     calculationArray.push(button.id);
         console.log(calculationArray);
         console.log("Length of the CalculationArray is: "+ calculationArray.length);
+        
                 }
 
         else if (button.id==="/"
@@ -63,7 +64,12 @@ function buttonCapture(){
 
             ) 
                 {
-                    console.log("Operator Entered");
+                    
+
+                    operatorType=button.id;
+                    console.log("Operator Entered " + operatorType);
+
+
 
                     if (number1===null)
                     {
@@ -71,6 +77,10 @@ function buttonCapture(){
                         number1=parseInt(number1,10); // This will convert string to a number
                         console.log("Number 1 Details: "+ number1+ "Type is" + typeof(number1));
                         calculationArray.length=0;
+                        displayUpdate(number1);
+
+
+                        
                     }
 
                     else if (number2===null)
@@ -80,9 +90,13 @@ function buttonCapture(){
                         console.log("Number 2 Details: "+ number2+ "Type is" + typeof(number2));
                         calculationArray.length=0;
                     }
+
+                    else {
+                        console.log("Both Numbers have values")
+                        operate(number1,operatorType,number2);
+
+                    }
   
-
-
 
 
                 }
@@ -102,52 +116,21 @@ function buttonCapture(){
                 }
         
         
-        // Number(button.id);
-        // if (button.id==="+")
-        // {
-        //     console.log("It is a +");
+       
 
-        // }
+        // displayUpdate();
 
-        // else if (button.id==="+"){
-        //     console.log("Not a Number");
-        // }
-    
-        // if (a<=3){
-        //     calculationArray[a]=Number(button.id)
-        //     a++;
-        // }
-
-        // else if (a==4)
-        // {
-        //     a=0;
-        // }
-// calculationArray Testing code
-        // calculationArray[1]=34;
-        // calculationArray[2]=67;
-        // calculationArray[3]="+";
-
-        displayUpdate();
-        // operate(calculationArray[1],calculationArray[3],calculationArray[2]);// This will call up the operate function with the inputted numbers and operators
-
-        // for (let i=0; i<3; i++){
-        //     // console.log(i);
-        //     calculationArray[i]=Number(button.id);
-        //     console.log(calculationArray[i]);
-        // }
-
-        // console.log("Array 1= "+calculationArray[1] +"  Array 2= " +calculationArray[2] + "  Array 3= "+ calculationArray[3])
 
         
       });
     
     
-      function displayUpdate ()
+      function displayUpdate (displayValue)
       {
         const calculatorDisplay=document.querySelector('#displayOutput');
         
 
-        calculatorDisplay.textContent=calculationArray; // This code will show array in displayout
+        calculatorDisplay.textContent=displayValue; // This code will show array in displayout
            
     
       }
@@ -159,6 +142,8 @@ function buttonCapture(){
 function operate(number1,operatorType,number2,)
 {
 
+    calculationArray.length=0;
+    
 
 if (operatorType==="+")
 {
@@ -192,9 +177,8 @@ let addNumbers=(number1,number2)=>
 {
     result=number1+number2;
     console.log(result);
-    // return displayUpdate(result);  
-    // calculatorDisplay.textContent=operate; // This code will show array in displayout
-//   displayUpdate(result);
+
+
 
 }
 
@@ -237,6 +221,9 @@ let divide =(number1,number2) =>
 
 buttonCapture();
 
+
+
+
 // Code to be checked and removed
                   // console.log(calculationArray);
 
@@ -247,3 +234,38 @@ buttonCapture();
                     //     console.log(typeof(number1));
 
                     // }
+
+
+
+        // for (let i=0; i<3; i++){
+        //     // console.log(i);
+        //     calculationArray[i]=Number(button.id);
+        //     console.log(calculationArray[i]);
+        // }
+
+        // console.log("Array 1= "+calculationArray[1] +"  Array 2= " +calculationArray[2] + "  Array 3= "+ calculationArray[3])
+
+         // Number(button.id);
+        // if (button.id==="+")
+        // {
+        //     console.log("It is a +");
+
+        // }
+
+        // else if (button.id==="+"){
+        //     console.log("Not a Number");
+        // }
+    
+        // if (a<=3){
+        //     calculationArray[a]=Number(button.id)
+        //     a++;
+        // }
+
+        // else if (a==4)
+        // {
+        //     a=0;
+        // }
+// calculationArray Testing code
+        // calculationArray[1]=34;
+        // calculationArray[2]=67;
+        // calculationArray[3]="+";
