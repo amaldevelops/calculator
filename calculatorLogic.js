@@ -26,6 +26,16 @@ const calculationArray=[]; // This array is used to capture the numbers and oper
 let a=1;
 
 
+function displayUpdate (displayValue)
+      {
+        const calculatorDisplay=document.querySelector('#displayOutput');
+        
+
+        calculatorDisplay.textContent=displayValue; // This code will show array in displayout
+           
+    
+      }
+
 // *User enters the first number: User can pause and keep continuing to enter the number, this process only stops
 // when the user enters operators (+  -  *  /  =  CLEAR). If = is entered currently entered number is shown, if user enters CLEAR then the Array and display is cleared. Currently entered number is shown on display in real time and saved to calculationArray[1]
 function buttonCapture(){
@@ -76,7 +86,7 @@ function buttonCapture(){
                         number1=calculationArray.join("") // This will join the array together to a single string
                         number1=parseInt(number1,10); // This will convert string to a number
                         console.log("Number 1 Details: "+ number1+ "Type is" + typeof(number1));
-                        calculationArray.length=0;
+                        console.log(calculationArray.length=0);
                         displayUpdate(number1);
 
 
@@ -89,6 +99,7 @@ function buttonCapture(){
                         number2=parseInt(number2,10); // This will convert string to a number
                         console.log("Number 2 Details: "+ number2+ "Type is" + typeof(number2));
                         calculationArray.length=0;
+                        displayUpdate(number2);
                     }
 
                     else {
@@ -125,15 +136,7 @@ function buttonCapture(){
       });
     
     
-      function displayUpdate (displayValue)
-      {
-        const calculatorDisplay=document.querySelector('#displayOutput');
-        
-
-        calculatorDisplay.textContent=displayValue; // This code will show array in displayout
-           
-    
-      }
+      
     
     });
     }
@@ -149,6 +152,7 @@ if (operatorType==="+")
 {
     console.log("Plus operator")
     addNumbers(number1,number2);
+
 }
 
 else if(operatorType==="-")
@@ -177,6 +181,7 @@ let addNumbers=(number1,number2)=>
 {
     result=number1+number2;
     console.log(result);
+    displayUpdate(result);
 
 
 
