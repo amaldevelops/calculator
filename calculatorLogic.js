@@ -23,7 +23,7 @@ let number2=null;
 let operatorType;
 let result;
 const calculationArray=[]; // This array is used to capture the numbers and operator from the user input buttons.
-let a=1;
+// let a=1;
 
 // Following function will clear the calculationArray
 function calculationArrayClear ()
@@ -84,6 +84,7 @@ function buttonCapture(){
                 ||button.id==="*"
                 ||button.id==="-"
                 ||button.id==="+"
+                ||button.id==="="
 
             ) 
                 {
@@ -113,40 +114,40 @@ function buttonCapture(){
 
                     else if (number1!==null && number2!==null && operatorType!=null)
                     {
-                        console.log("Both Numbers have values")
 
-                       result= operate(number1,operatorType,number2);
-                       displayUpdate(result); 
+
+                       operate(number1,operatorType,number2);
+                    //    displayUpdate(result); 
+                    console.log("Both Numbers have values so the result will be shown")
 
                     }
+
 
                     // else {
                     //     operate(number1,operatorType,number2);
 
                     // }
   
-
-
                 }
         
-        else if(button.id==="=")
-                {
-                    console.log("Equal Operator Entered")
+        // else if(button.id==="=")
+        //         {
+        //             console.log("Equal Operator Entered")
                     
-                    if (number1!==null && number2!==null && operatorType!=null)
-                    {
-                        operate(number1,operatorType,number2);
+        //             if (number1!==null && number2!==null && operatorType!=null)
+        //             {
+        //                 operate(number1,operatorType,number2);
 
 
-                    }
+        //             }
 
-                    else {
-                        console.log("Operation not complete")
-                    }
+        //             else {
+        //                 console.log("Operation not complete")
+        //             }
 
 
 
-                }
+        //         }
         
         else if (button.id==="clear")
                 {
@@ -172,7 +173,8 @@ function buttonCapture(){
 function operate(number1,operatorType,number2,)
 {
 
-    calculationArray.length=0;
+    // calculationArray.length=0;
+    calculationArrayClear ()
     
 
 if (operatorType==="+")
@@ -252,8 +254,6 @@ let divide =(number1,number2) =>
 
 
 buttonCapture();
-
-
 
 
 // Code to be checked and removed
