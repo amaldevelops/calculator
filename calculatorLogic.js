@@ -58,8 +58,8 @@ function buttonCapture(){
     
       button.addEventListener('click', () => {
 
-        console.log("number1 value" +number1);
-        console.log("number2 value" +number2);
+        // console.log("number1 value" +number1);
+        // console.log("number2 value" +number2);
 
         if (button.id==="0"
             ||button.id==="1"
@@ -75,8 +75,8 @@ function buttonCapture(){
                 {
                     console.log("Number Entered")
                     calculationArray.push(button.id);
-        console.log(calculationArray);
-        console.log("Length of the CalculationArray is: "+ calculationArray.length);
+                    console.log(calculationArray);
+                    console.log("Length of the CalculationArray is: "+ calculationArray.length);
         
                 }
 
@@ -88,11 +88,8 @@ function buttonCapture(){
             ) 
                 {
                     
-
                     operatorType=button.id;
                     console.log("Operator Entered " + operatorType);
-
-
 
                     if (number1===null)
                     {
@@ -114,11 +111,19 @@ function buttonCapture(){
                         displayUpdate(number2);
                     }
 
-                    else {
+                    else if (number1!==null && number2!==null && operatorType!=null)
+                    {
                         console.log("Both Numbers have values")
-                        operate(number1,operatorType,number2);
+
+                       result= operate(number1,operatorType,number2);
+                       displayUpdate(result); 
 
                     }
+
+                    // else {
+                    //     operate(number1,operatorType,number2);
+
+                    // }
   
 
 
@@ -127,6 +132,18 @@ function buttonCapture(){
         else if(button.id==="=")
                 {
                     console.log("Equal Operator Entered")
+                    
+                    if (number1!==null && number2!==null && operatorType!=null)
+                    {
+                        operate(number1,operatorType,number2);
+
+
+                    }
+
+                    else {
+                        console.log("Operation not complete")
+                    }
+
 
 
                 }
