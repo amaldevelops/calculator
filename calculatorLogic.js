@@ -73,10 +73,9 @@ function buttonCapture(){
             ||button.id==="9"
             )
                 {
-                    console.log("Number Entered")
                     calculationArray.push(button.id);
                     console.log(calculationArray);
-                    console.log("Length of the CalculationArray is: "+ calculationArray.length);
+                    //console.log("Length of the CalculationArray is: "+ calculationArray.length);
         
                 }
 
@@ -90,7 +89,7 @@ function buttonCapture(){
                 {
                     
                     operatorType=button.id;
-                    console.log("Operator Entered " + operatorType);
+                    //console.log("Operator Entered " + operatorType);
 
                     if (number1===null)
                     {
@@ -118,7 +117,7 @@ function buttonCapture(){
 
                        operate(number1,operatorType,number2);
                     //    displayUpdate(result); 
-                    console.log("Both Numbers have values so the result will be shown")
+                    console.log("Both Numbers have values so the result will be shown"+"number1 "+number1 + "number2 "+number2);
 
                     }
 
