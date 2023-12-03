@@ -72,13 +72,13 @@ function buttonCapture(){
             ||button.id==="8"
             ||button.id==="9"
             )
-                {
+                { // Following code will add the pressed numbers to the array
                     calculationArray.push(button.id);
                     console.log(calculationArray);
                     //console.log("Length of the CalculationArray is: "+ calculationArray.length);
         
                 }
-
+                // Following code will add pressed operators to the operator type variable
         else if (button.id==="/"
                 ||button.id==="*"
                 ||button.id==="-"
@@ -91,32 +91,31 @@ function buttonCapture(){
                     operatorType=button.id;
                     //console.log("Operator Entered " + operatorType);
 
-                    if (number1===null)
+                    if (number1===null) // If number1 is null following code will add the values in calculation array to number1 variable and clear the array
                     {
                         number1=calculationArray.join("") // This will join the array together to a single string
                         number1=parseInt(number1,10); // This will convert string to a number
                         console.log("Number 1 Details: "+ number1+ "Type is" + typeof(number1));
-                        console.log(calculationArrayClear());
+                        calculationArrayClear();
                         displayUpdate(number1);
 
                        
                     }
-
-                    else if (number2===null)
+                    // If number2 is null following code will add the values in calculation array to number2 variable and clear the array
+                    else if (number2===null) 
                     {
                         number2=calculationArray.join("") // This will join the array together to a single string
                         number2=parseInt(number2,10); // This will convert string to a number
                         console.log("Number 2 Details: "+ number2+ "Type is" + typeof(number2));
-                        console.log(calculationArrayClear());
+                        calculationArrayClear();
                         displayUpdate(number2);
                     }
-
+                    // If both number1 and number2 and operatorType is NOT Null following code will add the numbers together
                     else if (number1!==null && number2!==null && operatorType!=null)
                     {
 
 
                        operate(number1,operatorType,number2);
-                    //    displayUpdate(result); 
                     console.log("Both Numbers have values so the result will be shown"+"number1 "+number1 + "number2 "+number2);
 
                     }
@@ -172,14 +171,14 @@ function buttonCapture(){
 function operate(number1,operatorType,number2,)
 {
 
-    // calculationArray.length=0;
-    calculationArrayClear ()
+calculationArrayClear ()
     
 
 if (operatorType==="+")
 {
     console.log("Plus operator")
     addNumbers(number1,number2);
+    
 
 }
 
@@ -211,6 +210,7 @@ let addNumbers=(number1,number2)=>
     console.log(result);
     displayUpdate(result);
     numberNullSet();
+    displayUpdate (result);
 
 
 }
