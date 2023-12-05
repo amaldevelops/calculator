@@ -82,7 +82,7 @@ function buttonCapture(){
                 ||button.id==="*"
                 ||button.id==="-"
                 ||button.id==="+"
-                ||button.id==="="
+                // ||button.id==="="
 
             ) 
                 {
@@ -110,10 +110,11 @@ function buttonCapture(){
                         displayUpdate(number2);
 
 
-                        console.log("Both Numbers have values so the result should be: sshown on the display");
+                        console.log("Both Numbers have values so the result should be: shown on the display");
                         operate(number1,operatorType,number2);
 
                     }
+                   
                     // If both number1 and number2 and operatorType is NOT Null following code will add the numbers together
                     else if (number1!==null && number2!==null && operatorType!=null)
                     {
@@ -139,24 +140,31 @@ function buttonCapture(){
   
                 }
         
-        // else if(button.id==="=")
-        //         {
-        //             console.log("Equal Operator Entered")
+        else if(button.id==="=")
+                {
+                    console.log("Equal Operator Entered")
                     
-        //             if (number1!==null && number2!==null && operatorType!=null)
-        //             {
-        //                 operate(number1,operatorType,number2);
+                    if (number1!==null && number2==null && operatorType!=null)
+                    {
+                        number2=calculationArray.join("") // This will join the array together to a single string
+                        number2=parseInt(number2,10); // This will convert string to a number
+                        console.log("Number 2 Details: "+ number2+ "Type is " + typeof(number2));
+                        calculationArrayClear();
+                        displayUpdate(number2);
 
 
-        //             }
+                        console.log("Both Numbers have values so the result will be shown"+"number1 "+number1 + "number2 "+number2);
+                        operate(number1,operatorType,number2);
 
-        //             else {
-        //                 console.log("Operation not complete")
-        //             }
+                    }
+
+                    else {
+                        console.log("Both values don't have values")
+                    }
 
 
 
-        //         }
+                }
         
         else if (button.id==="clear")
                 {
