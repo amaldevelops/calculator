@@ -75,7 +75,6 @@ function buttonCapture(){
                 { // Following code will add the pressed numbers to the array
                     calculationArray.push(button.id);
                     console.log(calculationArray);
-                    //console.log("Length of the CalculationArray is: "+ calculationArray.length);
         
                 }
                 // Following code will add pressed operators to the operator type variable
@@ -95,7 +94,7 @@ function buttonCapture(){
                     {
                         number1=calculationArray.join("") // This will join the array together to a single string
                         number1=parseInt(number1,10); // This will convert string to a number
-                        console.log("Number 1 Details: "+ number1+ "Type is" + typeof(number1));
+                        console.log("Number 1 value: "+ number1+ " | Operator type is: " + operatorType + " | Number 2 value: " + number2 );
                         calculationArrayClear();
                         displayUpdate(number1);
 
@@ -106,17 +105,29 @@ function buttonCapture(){
                     {
                         number2=calculationArray.join("") // This will join the array together to a single string
                         number2=parseInt(number2,10); // This will convert string to a number
-                        console.log("Number 2 Details: "+ number2+ "Type is" + typeof(number2));
+                        console.log("Number 1 value: "+ number1+ " | Operator type is: " + operatorType + " | Number 2 value: " + number2 );
                         calculationArrayClear();
                         displayUpdate(number2);
+
+
+                        console.log("Both Numbers have values so the result should be: sshown on the display");
+                        operate(number1,operatorType,number2);
+
                     }
                     // If both number1 and number2 and operatorType is NOT Null following code will add the numbers together
                     else if (number1!==null && number2!==null && operatorType!=null)
                     {
 
+                        number2=calculationArray.join("") // This will join the array together to a single string
+                        number2=parseInt(number2,10); // This will convert string to a number
+                        console.log("Number 2 Details: "+ number2+ "Type is " + typeof(number2));
+                        calculationArrayClear();
+                        displayUpdate(number2);
 
-                       operate(number1,operatorType,number2);
-                    console.log("Both Numbers have values so the result will be shown"+"number1 "+number1 + "number2 "+number2);
+
+                        console.log("Both Numbers have values so the result will be shown"+"number1 "+number1 + "number2 "+number2);
+                        operate(number1,operatorType,number2);
+
 
                     }
 
