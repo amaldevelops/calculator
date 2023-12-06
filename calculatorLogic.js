@@ -20,8 +20,8 @@ based on saved operator on array[3] required arithmetic function is called and a
 // Section to add the required variable for the calculator
 let number1=null;
 let number2=null;
-let operatorType;
-let result;
+let operatorType=null;
+let result=null;
 const calculationArray=[]; // This array is used to capture the numbers and operator from the user input buttons.
 // let a=1;
 
@@ -37,6 +37,7 @@ function numberNullSet ()
     {
         number1=null;
         number2=null;
+        operatorType=null;
     }
 
 // Following function will update the calculator display
@@ -108,8 +109,6 @@ function buttonCapture(){
                         console.log("Number 1 value: "+ number1+ " | Operator type is: " + operatorType + " | Number 2 value: " + number2 );
                         calculationArrayClear();
                         displayUpdate(number2);
-
-
                         console.log("Both Numbers have values so the result should be: shown on the display");
                         operate(number1,operatorType,number2);
 
@@ -124,20 +123,12 @@ function buttonCapture(){
                         console.log("Number 2 Details: "+ number2+ "Type is " + typeof(number2));
                         calculationArrayClear();
                         displayUpdate(number2);
-
-
                         console.log("Both Numbers have values so the result will be shown"+"number1 "+number1 + "number2 "+number2);
                         operate(number1,operatorType,number2);
 
 
                     }
 
-
-                    // else {
-                    //     operate(number1,operatorType,number2);
-
-                    // }
-  
                 }
         
         else if(button.id==="=")
@@ -151,8 +142,6 @@ function buttonCapture(){
                         console.log("Number 2 Details: "+ number2+ "Type is " + typeof(number2));
                         calculationArrayClear();
                         displayUpdate(number2);
-
-
                         console.log("Both Numbers have values so the result will be shown"+"number1 "+number1 + "number2 "+number2);
                         operate(number1,operatorType,number2);
 
@@ -160,24 +149,15 @@ function buttonCapture(){
 
                     else {
                         console.log("Both values don't have values")
-                    }
-
-
-
+                        }
                 }
         
         else if (button.id==="clear")
                 {
                     console.log("Clear Button pressed")
-                    calculationArray.length=0;
+                    calculationArrayClear();
                     console.log(calculationArray);
                 }
-        
-        
-       
-
-        // displayUpdate();
-
 
         
       });
@@ -190,7 +170,7 @@ function buttonCapture(){
 function operate(number1,operatorType,number2,)
 {
 
-calculationArrayClear ()
+// calculationArrayClear ()
     
 
 if (operatorType==="+")
@@ -226,11 +206,10 @@ divide(number1,number2);
 let addNumbers=(number1,number2)=>
 {
     result=number1+number2;
-    console.log(result);
+    number1=result;
+    console.log(result + " " + number1);
     displayUpdate(result);
     numberNullSet();
-    displayUpdate (result);
-
 
 }
 
