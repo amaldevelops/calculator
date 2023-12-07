@@ -23,7 +23,7 @@ let number2=null;
 let operatorType=null;
 let result=null;
 const calculationArray=[]; // This array is used to capture the numbers and operator from the user input buttons.
-// let a=1;
+buttonCapture();
 
 // Following function will clear the calculationArray
 function calculationArrayClear ()
@@ -250,7 +250,7 @@ let divide =(number1,number2) =>
 
 
 
-buttonCapture();
+
 
 
 // Code to be checked and removed
