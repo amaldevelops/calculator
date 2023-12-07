@@ -29,13 +29,16 @@ buttonCapture();
 function calculationArrayClear ()
     {
         calculationArray.length=0;
+        calculationArray.push(0);
+        console.log("Calculation array has been reset and set to Zero as follows: " + calculationArray)
+
     }
 
 // Following function will set the number 1 and number 2 values to Null
 
 function numberNullSet ()
     {
-        number1=null;
+        // number1=null;
         number2=null;
         operatorType=null;
     }
@@ -85,7 +88,7 @@ function buttonCapture(){
                 ||button.id==="+"
                 // ||button.id==="="
 
-            ) 
+                ) 
                 {
                     
                     operatorType=button.id;
@@ -101,6 +104,7 @@ function buttonCapture(){
 
                        
                     }
+                    
                     // If number2 is null following code will add the values in calculation array to number2 variable and clear the array
                     else if (number2===null) 
                     {
@@ -117,7 +121,6 @@ function buttonCapture(){
                     // If both number1 and number2 and operatorType is NOT Null following code will add the numbers together
                     else if (number1!==null && number2!==null && operatorType!=null)
                     {
-
                         number2=calculationArray.join("") // This will join the array together to a single string
                         number2=parseInt(number2,10); // This will convert string to a number
                         console.log("Number 2 Details: "+ number2+ "Type is " + typeof(number2));
@@ -125,7 +128,6 @@ function buttonCapture(){
                         displayUpdate(number2);
                         console.log("Both Numbers have values so the result will be shown"+"number1 "+number1 + "number2 "+number2);
                         operate(number1,operatorType,number2);
-
 
                     }
 
