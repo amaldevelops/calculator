@@ -94,6 +94,8 @@ function buttonCapture(){
                     operatorType=button.id;
                     //console.log("Operator Entered " + operatorType);
 
+
+
                     if (number1===null) // If number1 is null following code will add the values in calculation array to number1 variable and clear the array
                     {
                         number1=calculationArray.join("") // This will join the array together to a single string
@@ -208,8 +210,6 @@ divide(number1,number2);
 let addNumbers=(number1,number2)=>
 {
     result=number1+number2;
-    number1=result;
-    console.log(result + " " + number1);
     displayUpdate(result);
     numberNullSet();
 
@@ -256,6 +256,12 @@ let divide =(number1,number2) =>
 
 
 // Code to be checked and removed
+// number1=result;
+// console.log("Result value = " + result + " " + "Number1 Value =" + number1);
+
+
+
+
                   // console.log(calculationArray);
 
                     // for (i=0;i<calculationArray.length;i++)
