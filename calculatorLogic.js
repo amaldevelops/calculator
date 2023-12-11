@@ -160,6 +160,8 @@ function buttonCapture(){
                 {
                     console.log("Clear Button pressed")
                     calculationArrayClear();
+                    numberNullSet();
+                    displayUpdate(0);
                     console.log(calculationArray);
                 }
 
