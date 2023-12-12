@@ -40,7 +40,7 @@ function numberNullSet ()
     {
         number1=null;
         number2=null;
-        operatorType=null;
+        // operatorType=null;
         number1=result;
     }
 
@@ -140,7 +140,7 @@ function buttonCapture(){
                 {
                     console.log("Number 1 value: "+ number1+ " | Operator type is: " + operatorType + " | Number 2 value: " + number2 );
                     
-                    if (number1!==null && operatorType!=null)
+                    if (number1!==null && number2==null && operatorType!=null)
                     {
                         number2=calculationArray.join("") // This will join the array together to a single string
                         number2=parseInt(number2,10); // This will convert string to a number
@@ -149,6 +149,7 @@ function buttonCapture(){
                         displayUpdate(number2);
                         console.log("Number 1 value: "+ number1+ " | Operator type is: " + operatorType + " | Number 2 value: " + number2 );
                         operate(number1,operatorType,number2);
+                        operatorType=null;
 
                     }
 
