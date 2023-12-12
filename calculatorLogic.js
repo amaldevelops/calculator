@@ -226,8 +226,8 @@ let addNumbers=(number1,number2)=>
 let subtract=(number1,number2)=>
 {
     result=number1-number2;
-    console.log(result);
-
+    displayUpdate(result);
+    numberNullSet();
 }
 
 
@@ -236,8 +236,8 @@ let subtract=(number1,number2)=>
 let multiply=(number1,number2)=>
 {
     result=number1*number2;
-    console.log(result);
-}
+    displayUpdate(result);
+    numberNullSet();}
 
 
 // Function to: divide Numbers
@@ -250,8 +250,8 @@ let multiply=(number1,number2)=>
 let divide =(number1,number2) =>
 {
     result=number1/number2;
-    console.log(result);
-
+    displayUpdate(result);
+    numberNullSet();
 }
 
 
