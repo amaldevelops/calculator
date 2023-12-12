@@ -40,7 +40,6 @@ function numberNullSet ()
     {
         number1=null;
         number2=null;
-        // operatorType=null;
         number1=result;
     }
 
@@ -62,9 +61,6 @@ function buttonCapture(){
     buttons.forEach((button) => {
     
       button.addEventListener('click', () => {
-
-        // console.log("number1 value" +number1);
-        // console.log("number2 value" +number2);
 
         if (button.id==="0"
             ||button.id==="1"
@@ -166,7 +162,6 @@ function buttonCapture(){
                     displayUpdate(0);
                     console.log(calculationArray);
                 }
-
         
       });
     
@@ -222,7 +217,6 @@ let addNumbers=(number1,number2)=>
 
 // Function to: subtract Numbers
 
-
 let subtract=(number1,number2)=>
 {
     result=number1-number2;
@@ -239,14 +233,6 @@ let multiply=(number1,number2)=>
     displayUpdate(result);
     numberNullSet();}
 
-
-// Function to: divide Numbers
-
-// function divide(number1,number2)
-// {
-    
-// }
-
 let divide =(number1,number2) =>
 {
     result=number1/number2;
@@ -255,13 +241,7 @@ let divide =(number1,number2) =>
 }
 
 
-
-
-
-
 // Code to be checked and removed
-// number1=result;
-// console.log("Result value = " + result + " " + "Number1 Value =" + number1);
 
 
 
