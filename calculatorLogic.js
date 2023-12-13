@@ -29,7 +29,7 @@ buttonCapture();
 function calculationArrayClear ()
     {
         calculationArray.length=0;
-        calculationArray.push(0);
+        // calculationArray.push(0);
         console.log("Calculation array has been reset and set to Zero as follows: " + calculationArray)
 
     }
@@ -89,9 +89,6 @@ function buttonCapture(){
                 {
                     
                     operatorType=button.id;
-                    //console.log("Operator Entered " + operatorType);
-
-
 
                     if (number1===null) // If number1 is null following code will add the values in calculation array to number1 variable and clear the array
                     {
@@ -231,7 +228,8 @@ let multiply=(number1,number2)=>
 {
     result=number1*number2;
     displayUpdate(result);
-    numberNullSet();}
+    numberNullSet();
+}
 
 let divide =(number1,number2) =>
 {
