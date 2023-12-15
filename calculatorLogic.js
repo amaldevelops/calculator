@@ -233,9 +233,17 @@ let multiply=(number1,number2)=>
 
 let divide =(number1,number2) =>
 {
-    result=number1/number2;
-    displayUpdate(result);
-    numberNullSet();
+    if (number2==0)
+    {
+        displayUpdate("No Zero divide mate!")
+
+    }
+    else {
+        result=number1/number2;
+        displayUpdate(result);
+        numberNullSet();
+    }
+
 }
 
 
