@@ -41,6 +41,7 @@ function numberNullSet ()
         number1=null;
         number2=null;
         number1=result;
+        calculationArray.length=0;
     }
 
 // Following function will update the calculator display
@@ -154,11 +155,12 @@ function buttonCapture(){
         else if (button.id==="clear")
                 {
                     console.log("Clear Button pressed")
-                    calculationArrayClear();
-                    numberNullSet();
+                    // calculationArrayClear();
+                    number1=null;
+                    number2=null;
+                    calculationArray.length=0;
                     displayUpdate(0);
-                    console.log(calculationArray);
-                }
+                    console.log("Number 1 value: "+ number1+ " | Operator type is: " + operatorType + " | Number 2 value: " + number2 );                }
         
       });
     
