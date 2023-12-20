@@ -11,6 +11,8 @@ body{
 #calculator-body
 {
     background-color: rgb(25, 24, 24);
+    display:flex;
+    
 }
 
 button
@@ -21,7 +23,7 @@ button
 
 #zero
 {
-
+    
 }
 
 #oneTwoThree
@@ -40,7 +42,7 @@ button
 
 #arithmeticOperators
 {
-    /* flex:1; */
+    flex:1;
 
 }
 
