@@ -1,18 +1,27 @@
 body{
 
-    display: flex;
-    justify-content: center;
+    display: block;
+    /* justify-content: center; */
     /* align-items: center; */
     background-color: rgb(219, 213, 213);
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+#intro
+{
+
+}
+
 #calculator-body
 {
     display:flex;
-    height: 100vh;
-    width: 50vw;
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 70vh;
+    height:90vh;
+    min-width: 60vw;
+    width: 50vh;
+
     background-color: rgb(25, 24, 24);
         
 }
@@ -29,6 +38,13 @@ body{
     border-color: brown;
 }
 
+#userInput
+{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
 button
 {
     width:10vw;
@@ -41,6 +57,22 @@ button
     border-radius: 10px;
     border-color: aquamarine;
     padding:5px;
+
+}
+
+#row1 
+{
+align-items: end;
+}
+
+#column1 
+{
+
+
+}
+
+#column2 
+{
 
 }
 
