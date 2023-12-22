@@ -1,5 +1,5 @@
 body{
-    /* display: flex; */
+
     display: block;
     background-color: rgb(219, 213, 213);
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -8,14 +8,19 @@ body{
 #calculator-body
 {
     display:flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: rgb(25, 24, 24);
         
 }
 
 #displayOutput{
+    width:200px;
+    height: 200px;
+    padding:5px;
     color:rgb(87, 194, 123);
     background-color: aliceblue;
-    font-size: 3rem;
+    font-size: 100px;
     border-style: double;
     border-color: brown;
 }
