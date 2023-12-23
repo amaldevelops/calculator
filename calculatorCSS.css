@@ -15,7 +15,8 @@ body{
 #calculator-body
 {
     display:flex;
-    flex-direction: column;
+    flex:1;
+    flex-direction:column;
     justify-content: space-between;
     min-height: 200px;
     height:90vh;
@@ -42,9 +43,27 @@ body{
 #userInput
 {
     display: flex;
-    flex-direction:column;
-    /* justify-content: space-around; */
-    
+    flex:1;
+    flex-direction:row;
+       
+}
+
+#row1 
+{
+
+}
+
+#column1 
+{
+
+
+}
+
+#column2 
+{
+    display: flex;
+    flex:1;
+    flex-direction:row;
 }
 
 button
@@ -62,21 +81,7 @@ button
 
 }
 
-#row1 
-{
 
-}
-
-#column1 
-{
-    /* align-self: flex-start; */
-
-}
-
-#column2 
-{
-    /* align-self: flex-end; */
-}
 
 #zeroClearEqual
 {
