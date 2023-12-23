@@ -41,8 +41,8 @@ body{
 #userInput
 {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction:column;
+    /* justify-content: space-around; */
     
 }
 
@@ -68,18 +68,18 @@ button
 
 #column1 
 {
-    
+    /* align-self: flex-start; */
 
 }
 
 #column2 
 {
-
+    /* align-self: flex-end; */
 }
 
 #zeroClearEqual
 {
-    flex-direction: row;
+    /* flex-direction: row; */
 }
 
 #oneTwoThree
