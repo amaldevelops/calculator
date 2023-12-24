@@ -1,15 +1,8 @@
 body{
 
     display: block;
-    /* justify-content: center; */
-    /* align-items: center; */
     background-color: rgb(219, 213, 213);
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-#intro
-{
-
 }
 
 #calculator-body
@@ -49,18 +42,7 @@ body{
     flex:1;
     /* flex-direction:column; */
     justify-content: space-around;
-
        
-}
-
-#row1 
-{
-
-}
-
-#column1 
-{
-
 }
 
 #column2 
@@ -84,7 +66,6 @@ button
     border-style:inset;
     border-color: rgb(77, 112, 217);
     
-
 }
 
 #column1 button 
@@ -101,31 +82,5 @@ button
 {
     color: rgb(255, 0, 25);
     
-
-}
-
-#zeroClearEqual
-{
-    /* flex-direction: row; */
-}
-
-#oneTwoThree
-{
-    
-}
-
-#fourFiveSix
-{
-/* justify-content: space-between; */
-}
-
-#sevenEightNine
-{
-}
-
-#arithmeticOperators
-{
-    /* flex:1; */
-
 }
 
