@@ -18,9 +18,9 @@ body{
     flex:1;
     flex-direction:column;
     justify-content: space-evenly;
-    height: 600px;
+    height: 500px;
     /* height:90vh; */
-    width: 450px;
+    width: 380px;
     /* width: 50vh; */
     background-color: rgb(25, 24, 24);
     padding:10px;
@@ -30,8 +30,8 @@ body{
 #displayOutput{
     display:flex;
     flex:1;
-    width:400px;    
-    height: 100px;
+    width:350px;    
+    height: 80px;
     padding:5px;
     justify-content:end;
     color:rgb(62, 65, 63);
@@ -60,7 +60,6 @@ body{
 #column1 
 {
 
-
 }
 
 #column2 
@@ -68,16 +67,17 @@ body{
     display: flex;
     flex:1;
     flex-direction:row;
+
 }
 
 button
 {
-    width:100px;
-    height: 100px;
-    font-size: 50px;
+    width:80px;
+    height: 80px;
+    font-size: 40px;
     font-style:italic;
     background-color: rgb(71, 71, 75);
-    color: aliceblue;
+    color: rgb(31, 34, 36);
     border-style:inset;
     border-radius: 10px;
     border-color: rgb(77, 112, 217);
@@ -85,7 +85,15 @@ button
 
 }
 
+#column1 button 
+{
+    background-color: rgb(235, 131, 4);
+}
 
+#column2 button 
+{
+    background-color: rgb(7, 184, 78);
+}
 
 #zeroClearEqual
 {
