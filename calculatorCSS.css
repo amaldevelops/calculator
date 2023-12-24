@@ -18,9 +18,9 @@ body{
     flex:1;
     flex-direction:column;
     justify-content: space-evenly;
-    height: 500px;
+    height: 350px;
     /* height:90vh; */
-    width: 380px;
+    width: 300px;
     /* width: 50vh; */
     background-color: rgb(25, 24, 24);
     padding:10px;
@@ -30,24 +30,25 @@ body{
 #displayOutput{
     display:flex;
     flex:1;
-    width:350px;    
-    height: 80px;
+    width:290px;    
+    height: 50px;
     padding:5px;
+    border-width: 5px;
+    font-size: 40px;
     justify-content:end;
     color:rgb(62, 65, 63);
     background-color: rgb(162, 172, 181);
-    font-size: 70px;
     border-style: double;
     border-color: rgb(42, 165, 61);
-    border-width: 5px;
+    
 }
 
 #userInput
 {
     display: flex;
-    /* flex:1; */
-    /* flex-direction:row; */
-    /* justify-content: space-around; */
+    flex:1;
+    /* flex-direction:column; */
+    justify-content: space-around;
 
        
 }
@@ -72,16 +73,18 @@ body{
 
 button
 {
-    width:80px;
-    height: 80px;
-    font-size: 40px;
+    width:60px;
+    height: 60px;
+    font-size: 30px;
+    padding:1px;
+    border-radius: 10px;
     font-style:italic;
     background-color: rgb(71, 71, 75);
     color: rgb(31, 34, 36);
     border-style:inset;
-    border-radius: 10px;
+    
     border-color: rgb(77, 112, 217);
-    padding:5px;
+    
 
 }
 
