@@ -1,120 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-    <link rel="stylesheet" href="./calculatorCSS.css">
-    <link rel="stylesheet" href="https://1amal.github.io/main.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="../JavaScript-Calculator/calculatorCSS.css" />
+    <!-- <link rel="stylesheet" href="https://1amal.github.io/main.css"> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amals's Calculator</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <!-- This DIV contains the navigation bar-->
+      <ul>
+        <li>
+          <a href="https://1amal.github.io/" target="_blank">Portfolio |</a>
+        </li>
 
-    <div class="nav-bar"> <!-- This DIV contains the navigation bar-->
-        <ul>
-            <li>
-                <a href="https://1amal.github.io/" target="_blank">Portfolio |</a>
-            </li>
-
-            <li>
-                <a href="https://au.linkedin.com/in/1amal"target="_blank">LinkedIn |</a>
-            </li>
-
-            <li>
-                <a href="https://1amal.github.io/engineering-reference/" target="_blank">Engineering Reference |</a>
-            </li>
-    
-            <li>
-                <a href="https://amaldevelops.pythonanywhere.com/" target="_blank">Weather App</a>
-            </li>
-    
-    
-        </ul>
-    
+        <li>
+          <a href="https://au.linkedin.com/in/1amal" target="_blank"
+            >LinkedIn </a
+          >
+        </li>
+      </ul>
     </div>
 
-<div id="intro">
-    
-    <h1>Amal's Calculator</h1>
-
-</div>
-    
-<div id="calculator-body">
-        
-    <div id="row1"> 
-            
-            <h1 id="displayOutput">0</h1>
-
+    <div id="intro">
+      <h1>Web Based Calculator</h1>
     </div>
 
-   <div id="userInput"> 
+    <div id="calculator-body">
+      <div id="row1">
+        <h1 id="displayOutput">0</h1>
+      </div>
 
-    
-        <div id="column1"> 
+      <div id="userInput">
+        <div id="column1">
+          <div id="sevenEightNine">
+            <button id="7" type="button">7</button>
+            <button id="8" type="button">8</button>
+            <button id="9" type="button">9</button>
+          </div>
 
-            <div id="sevenEightNine">
-
-                <button id="7" type="button">7</button>
-                <button id="8" type="button">8</button>
-                <button id="9" type="button">9</button>
-            
-            </div>
-
-        <div id="fourFiveSix">
-
+          <div id="fourFiveSix">
             <button id="4" type="button">4</button>
             <button id="5" type="button">5</button>
             <button id="6" type="button">6</button>
-            
-        </div>
+          </div>
 
-        <div id="oneTwoThree"> 
-
+          <div id="oneTwoThree">
             <button id="1" type="button">1</button>
             <button id="2" type="button">2</button>
             <button id="3" type="button">3</button>
+          </div>
 
-        </div>
-
-        <div id="zeroClearEqual">   
-
+          <div id="zeroClearEqual">
             <button id="0" type="button">0</button>
             <button id="clear" type="button">AC</button>
             <button id="=" type="button">=</button>
-
+          </div>
         </div>
 
-
-
+        <div id="column2">
+          <button id="/" type="button">/</button>
+          <button id="*" type="button">X</button>
+          <button id="+" type="button">+</button>
+          <button id="-" type="button">-</button>
+        </div>
+      </div>
     </div>
 
-    <div id="column2">
-
-        <div id="arithmeticOperators">
-
-            <button id="/" type="button"> / </button>
-            <button id="*" type="button"> X </button>
-            <button id="+" type="button"> + </button>
-            <button id="-" type="button"> - </button>
-
-        </div>
-
-
-
-       </div>
-        
-    </div>  
-</div>
-
-<div><h3>Specifications</h3>
-<ul>
-    <li>Display up to 10 Digits</li>
-    <li>Only capable of doing simple calculations</li>
-    <li>Able to do chain calculations</li>
-</ul>
-
-</div>
+    <div>
+      <h3>Specifications</h3>
+      <ul>
+        <li>Display up to 10 Digits</li>
+        <li>Only capable of doing simple calculations</li>
+        <li>Able to do chain calculations</li>
+      </ul>
+    </div>
 
     <script src="./calculatorLogic.js"></script>
-</body>
+  </body>
 </html>

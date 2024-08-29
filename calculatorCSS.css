@@ -1,86 +1,118 @@
-body{
-
-    display: block;
-    background-color: rgb(219, 213, 213);
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+body {
+  display: block;
+  background-color: rgb(219, 213, 213);
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-#calculator-body
-{
-    display:flex;
-    flex:1;
-    flex-direction:column;
-    justify-content: space-evenly;
-    height: 350px;
-    /* height:90vh; */
-    width: 250px;
-    /* width: 50vh; */
-    background-color: rgb(197, 188, 188);
-    padding:10px;
-        
+/* ********** Start of code for Navigation Bar **********  */
+.nav-bar {
+  background-color: #1f2937;
+  padding: 1vw;
+  display: flex; /*Enable flexbox layout */
+  flex-direction: row;
+  justify-content: space-between; /*This defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. 
+  It also exerts some control over the alignment of items when they overflow the line. */
+  flex-wrap: wrap;
+  flex-shrink: 0;
 }
 
-#displayOutput{
-    display:flex;
-    flex:1;
-    width:230px;    
-    height: 50px;
-    padding:5px;
-    border-width: 5px;
-    font-size: 40px;
-    justify-content:end;
-    color:rgb(62, 65, 63);
-    background-color: rgb(162, 172, 181);
-    border-style: double;
-    border-color: rgb(42, 165, 61);
-    
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-#userInput
-{
-    display: flex;
-    flex:1;
-    /* flex-direction:column; */
-    justify-content: space-around;
-       
+.nav-bar li {
+  float: left;
 }
 
-#column2 
-{
-    display: flex;
-    flex:1;
-    flex-direction:row;
-
+.nav-bar li a {
+  color: #f9faf8;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  text-decoration: none;
+  font-size: 2rem;
 }
 
-button
-{
-    width:60px;
-    height: 60px;
-    font-size: 30px;
-    padding:1px;
-    border-radius: 10px;
-    font-style:italic;
-    background-color: rgb(71, 71, 75);
-    color: rgb(31, 34, 36);
-    border-style:inset;
-    border-color: rgb(77, 112, 217);
-    
+.nav-bar li a:hover {
+  background-color: #15d48e;
 }
 
-#column1 button 
-{
-    background-color: rgb(255, 137, 3);
+.nav-bar a:active {
+  background-color: #0704aa;
 }
 
-#column2 button 
-{
-    background-color: rgb(4, 165, 68);
+/* ********** End of code for Navigation Bar **********  */
+
+#calculator-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: max-content;
+  width: max-content;
+
+  background-color: rgb(197, 188, 188);
+  padding: 10px;
 }
 
-#clear
-{
-    color: rgb(255, 0, 25);
-    
+#displayOutput {
+  display: flex;
+  flex: 1;
+
+  min-height: 250px;
+  min-height: 250px;
+
+  padding: 5px;
+  border-width: 5px;
+  font-size: 40px;
+  justify-content: end;
+  color: rgb(62, 65, 63);
+  background-color: rgb(162, 172, 181);
+  border-style: double;
+  border-color: rgb(42, 165, 61);
 }
 
+#userInput {
+  display: flex;
+  flex: 1;
+  /* flex-direction:column; */
+  justify-content: space-around;
+}
+
+#column2 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  justify-items: end;
+}
+
+button {
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  padding: 1px;
+  border-radius: 10px;
+  font-style: italic;
+  background-color: rgb(71, 71, 75);
+  color: rgb(31, 34, 36);
+  border-style: inset;
+  border-color: rgb(77, 112, 217);
+}
+
+#column1 button {
+  background-color: rgb(255, 137, 3);
+}
+
+#column2 button {
+  background-color: rgb(4, 165, 68);
+}
+
+#clear {
+  color: rgb(255, 0, 25);
+}
