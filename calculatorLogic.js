@@ -72,6 +72,8 @@ function buttonCapture() {
       ) {
         // Following code will add the pressed numbers to the array
         calculationArray.push(button.id);
+        let displayOutput = calculationArray.join("");
+        displayUpdate(displayOutput);
         console.log(calculationArray);
       }
       // Following code will add pressed operators to the operator type variable
