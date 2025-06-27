@@ -50,7 +50,7 @@ body {
 
 #calculator-body {
   display: flex;
-  flex: 1;
+  /* flex: 1; */
   flex-direction: column;
   justify-content: space-evenly;
   height: max-content;
@@ -62,11 +62,11 @@ body {
 
 #displayOutput {
   display: flex;
+  flex-direction: row;
   flex: 1;
 
-  min-height: 250px;
-  min-height: 250px;
-
+  min-height: 100px;
+  max-height: 200px;
   padding: 5px;
   border-width: 5px;
   font-size: 40px;
